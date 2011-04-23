@@ -38,7 +38,7 @@
 	
 	new_file = files[0].gsub('.js','.min.js')
 	File.open(new_file, 'w') { |f| f.write compressed }
-	puts "Wrote to #{new_file}"
+	puts "Created uglified file at #{File.basename(new_file)}"
 </string>
 	<key>fallbackInput</key>
 	<string>document</string>
