@@ -9,10 +9,24 @@
 	require 'pp'
 	require 'open3'
 	
+	def verify_node_path
+	  if !ENV['NODE_PATH'] or ENV['NODE_PATH'].empty?
+	    if File.directory?('/usr/local/lib/node/')
+	      ENV['NODE_PATH'] = '/usr/local/lib/node'
+	    else
+	      puts "Cannot detect node path. Please set NODE_PATH environment variable manually in Textmate Preferences (Advanced)."
+	      exit
+	    end
+	  elsif !File.directory?(ENV['NODE_PATH'])
+	    puts "Specified node path does not exist. You may need to set manually with a NODE_PATH environment variable in Textmate Preferences (Advanced)."
+	    exit
+	  end
+	end
+	
 	files = ENV['TM_SELECTED_FILES'][1..-2].split("' '")
 	
-	ENV['NODE_PATH'] = '/usr/local/lib/node'
-	UGLIFY_JS_PATH = '/usr/local/bin/uglifyjs'
+	verify_node_path
+	UGLIFY_JS_PATH = 'uglifyjs'
 	
 	compressed = ''
 	files.each do |file|
