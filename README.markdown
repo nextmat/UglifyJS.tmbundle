@@ -2,7 +2,7 @@
 
 ## Overview
 
-A Textmate bundle which allows you to easily minify your javascript files using [UglifyJS](https://github.com/mishoo/UglifyJS) by Mihai Bazon.
+A TextMate bundle which allows you to easily minify your JavaScript files using [UglifyJS](https://github.com/mishoo/UglifyJS) by Mihai Bazon.
 
 ## Usage
 
@@ -20,29 +20,31 @@ A new file will be created with your files combined and minified.
 
 The bundle currently relies on [node.js](http://nodejs.org/) and the [UglifyJS npm package](https://github.com/mishoo/UglifyJS). If you need to install these, follow the instructions in the next section, then return here to install the bundle.
 
-    mkdir -p ~/Library/Application\ Support/TextMate/Bundles/
-    cd ~/Library/Application\ Support/TextMate/Bundles/
-    git clone git://github.com/nextmat/UglifyJS-tmbundle.git UglifyJS.tmbundle
-    osascript -e 'tell app "TextMate" to reload bundles'
+``` bash
+mkdir -p ~/Library/Application\ Support/TextMate/Bundles/
+cd ~/Library/Application\ Support/TextMate/Bundles/
+git clone https://github.com/nextmat/UglifyJS.tmbundle.git UglifyJS.tmbundle
+osascript -e 'tell app "TextMate" to reload bundles'
+```
 
-There are a couple of environment variables to set up in Textmate (menu) -> Preferences -> Advanced -> Shell Variables
+There are a couple of environment variables to set up in TextMate (menu) → Preferences → Advanced → Shell Variables
 
-1: The directory of `node` and and `uglifyjs` needs to be in your `PATH`. In most cases this is `/usr/local/bin` . You can verify the locations with:
+1: The directory of `node` and `uglifyjs` needs to be in your `PATH`. In most cases this is `/usr/local/bin` . You can verify the locations with:
 
     which node
     which uglifyjs
 
-2: The bundle should auto-detect your `NODE_PATH`. If it can't and complains, you should add your `NODE_PATH` to TextMate's environment variables.
+2: The bundle should auto-detect your `NODE_PATH`. If it can't and complains, you should add your `NODE_PATH` to TextMate’s environment variables.
 
 ## Installing the UglifyJS package
 
-The bundle currently relies on the UglifyJS package, which runs on top of NodeJS. There are multiple ways to get this installed, but homebrew is an excellent choice.
+The bundle currently relies on the UglifyJS package, which runs on top of NodeJS. There are multiple ways to get this installed, but [Homebrew](http://mxcl.github.com/homebrew/) is an excellent choice.
 
     brew install node  # install nodeJS
     # install npm (node package manager)
 	# npm command
 
-## Todo / Contributing
+## ToDo / Contributing
 
 Planned improvements:
 
@@ -76,4 +78,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
-
