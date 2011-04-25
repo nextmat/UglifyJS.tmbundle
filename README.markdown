@@ -2,7 +2,7 @@
 
 ## Overview
 
-A Textmate bundle which allows you to easily minify your javascript files using [UglifyJS]() by Mihai Bazon.
+A Textmate bundle which allows you to easily minify your javascript files using [UglifyJS](https://github.com/mishoo/UglifyJS) by Mihai Bazon.
 
 ## Usage
 
@@ -12,7 +12,7 @@ A new file will be created with your files combined and minified.
 
 ## Installing the bundle
 
-The bundle currently relies on [NodeJS]() and the [UglifyJS npm package](). If you need to install these, follow the instructions in the next section, then return here to install the bundle.
+The bundle currently relies on [node.js](http://nodejs.org/) and the [UglifyJS npm package](https://github.com/mishoo/UglifyJS). If you need to install these, follow the instructions in the next section, then return here to install the bundle.
 
     mkdir -p ~/Library/Application\ Support/TextMate/Bundles/
     cd ~/Library/Application\ Support/TextMate/Bundles/
@@ -47,6 +47,26 @@ Planned improvements:
 I'll get to these as I can, if you feel so motivated I will happily accept patches!
 
 ## License
+
 The UglifyJS.tmbundle is released under the MIT license.
-Copyright 2011 Matt Sanders.
+
+Copyright (c) 2011 Matt Sanders
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
 
