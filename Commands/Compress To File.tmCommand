@@ -23,14 +23,24 @@
 	  end
 	end
 	
+	def verify_exec_path(executable)
+	  location = `which #{executable}`
+	  if location.empty?
+	    puts "Cannot find executable '#{executable}'. Make sure that it is accessible in your Textmate PATH (in TextMate Preferences -> Advanced)"
+	    exit
+	  end
+	  location
+	end
+	
 	files = ENV['TM_SELECTED_FILES'][1..-2].split("' '")
 	
 	verify_node_path
-	UGLIFY_JS_PATH = 'uglifyjs'
+	verify_exec_path 'node'
+	verify_exec_path 'uglifyjs'
 	
 	compressed = ''
 	files.each do |file|
-	  to_execute = %Q[#{UGLIFY_JS_PATH} "#{file}"]
+	  to_execute = %Q[uglifyjs "#{file}"]
 	  Open3.popen3(to_execute) do |stdin, stdout, stderr, wait_thr|
 	    compressed = compressed + stdout.read
 	  end
@@ -38,7 +48,11 @@
 	
 	new_file = files[0].gsub('.js','.min.js')
 	File.open(new_file, 'w') { |f| f.write compressed }
-	puts "Created uglified file at #{File.basename(new_file)}"
+	if File.size?(new_file)
+	  puts "Created uglified file at #{File.basename(new_file)}"
+	else
+	  puts "An error occurred writing compressed file at #{new_file}"
+	end
 </string>
 	<key>fallbackInput</key>
 	<string>document</string>
