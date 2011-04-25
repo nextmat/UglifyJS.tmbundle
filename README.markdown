@@ -8,6 +8,8 @@ A Textmate bundle which allows you to easily minify your javascript files using 
 
 Select one or more files in the file drawer and use the shortcut (command-shift-u) or select from the bundle action menu at the bottom of your Textmate window.
 
+A new file will be created with your files combined and minified.
+
 ## Installing the bundle
 
 The bundle currently relies on [NodeJS]() and the [UglifyJS npm package](). If you need to install these, follow the instructions in the next section, then return here to install the bundle.
