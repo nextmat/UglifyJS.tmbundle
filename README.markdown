@@ -26,7 +26,7 @@ There are a couple of environment variables to set up in Textmate (menu) -> Pref
     which node
     which uglifyjs
 
-2: The bundle should auto-detect your `NODE_PATH`. If it can't and complains, you should add your `NODE_PATH` to the environment variables.
+2: The bundle should auto-detect your `NODE_PATH`. If it can't and complains, you should add your `NODE_PATH` to TextMate's environment variables.
 
 ## Installing the UglifyJS package
 
