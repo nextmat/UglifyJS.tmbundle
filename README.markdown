@@ -40,7 +40,7 @@ The bundle currently relies on the UglifyJS package, which runs on top of NodeJS
 
     $ brew install node  # install nodeJS
     $ # install npm (node package manager)
-    $ # npm command
+    $ npm install uglify-js
 
 ## ToDo / Contributing
 
