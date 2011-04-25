@@ -49,6 +49,7 @@ Planned improvements:
 * Make bundle dependency-free by including UglifyJS and using Apple's built-in Webkit js intepreter
 * More attractive result pages
 * Interface improvements
+* Add a command for updating to the latest version of the bundle from inside TextMate
 
 I'll get to these as I can, if you feel so motivated I will happily accept patches!
 
