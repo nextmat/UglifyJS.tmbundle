@@ -27,7 +27,7 @@ The bundle currently relies on [node.js](http://nodejs.org/) and the [UglifyJS n
 
 There are a couple of environment variables to set up in TextMate (menu) → Preferences → Advanced → Shell Variables
 
-1: The directory of `node` and `uglifyjs` needs to be in your `PATH`. In most cases this is `/usr/local/bin` . You can verify the locations with:
+1: The directories of `node` and `uglifyjs` need to be in your `PATH`. If you used Homebrew to install these will likely be `/usr/local/bin` and `/usr/local/share/npm/bin`. You can verify the locations with:
 
     $ which node
     $ which uglifyjs
@@ -38,9 +38,11 @@ There are a couple of environment variables to set up in TextMate (menu) → Pre
 
 The bundle currently relies on the UglifyJS package, which runs on top of NodeJS. There are multiple ways to get this installed, but [Homebrew](http://mxcl.github.com/homebrew/) is an excellent choice.
 
-    $ brew install node  # install nodeJS
-    $ # install npm (node package manager)
+    $ brew install node  # install node.js
+    $ brew install npm   # install node package manager
     $ npm install uglify-js
+
+Be sure to follow any instructions given by Homebrew regarding environment variables for your shell. After installation you should be able to `which node` and `which uglifyjs`. If either don't show you a path, read the post-install instructions from Homebrew again before continuing.
 
 ## ToDo / Contributing
 
