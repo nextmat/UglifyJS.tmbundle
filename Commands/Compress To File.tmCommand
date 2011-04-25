@@ -34,8 +34,8 @@
 	
 	files = ENV['TM_SELECTED_FILES'][1..-2].split("' '")
 	
-	verify_node_path
 	verify_exec_path 'node'
+	verify_node_path
 	verify_exec_path 'uglifyjs'
 	
 	compressed = ''
