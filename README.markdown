@@ -6,7 +6,13 @@ A Textmate bundle which allows you to easily minify your javascript files using 
 
 ## Usage
 
-Select one or more files in the file drawer and use the shortcut (command-shift-u) or select from the bundle action menu at the bottom of your Textmate window.
+Select one or more files in the file drawer. 
+
+![Selecting files to compress](https://github.com/nextmat/UglifyJS.tmbundle/blob/master/Support/images/multi_select.png?raw=true)
+
+Use the shortcut (command-shift-u) or select from the bundle action menu at the bottom of your Textmate window.
+
+![Running the compress command](https://github.com/nextmat/UglifyJS.tmbundle/blob/master/Support/images/running.png?raw=true)
 
 A new file will be created with your files combined and minified.
 
