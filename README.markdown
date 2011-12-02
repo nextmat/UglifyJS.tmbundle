@@ -6,7 +6,7 @@ A TextMate bundle which allows you to easily minify your JavaScript files using 
 
 ## Usage
 
-Select one or more files in the file drawer. 
+Select one or more files in the file drawer.
 
 ![Selecting files to compress](https://github.com/nextmat/UglifyJS.tmbundle/blob/master/Support/images/multi_select.png?raw=true)
 
@@ -23,11 +23,13 @@ The bundle currently relies on [node.js](http://nodejs.org/) and the [UglifyJS n
     mkdir -p ~/Library/Application\ Support/TextMate/Bundles/
     cd ~/Library/Application\ Support/TextMate/Bundles/
     git clone https://github.com/nextmat/UglifyJS.tmbundle.git UglifyJS.tmbundle
-    osascript -e 'tell app "TextMate" to reload bundles'    
+
+If Textmate is already running you will either need to restart it or run
+Bundles (menu) → Bundle Editor → Reload Bundles`.
 
 There are a couple of environment variables to set up in TextMate (menu) → Preferences → Advanced → Shell Variables
 
-1: The directories of `node` and `uglifyjs` need to be in your `PATH`. If you used Homebrew to install these will likely be `/usr/local/bin` and `/usr/local/share/npm/bin`. You can verify the locations with:
+1: The directories of `node` and `uglifyjs` need to be in your `PATH`. If you used Homebrew to install these will likely both be in `/usr/local/bin`. You can verify the locations with:
 
     which node
     which uglifyjs
@@ -40,7 +42,7 @@ The bundle currently relies on the UglifyJS package, which runs on top of NodeJS
 
     brew install node                      # install node.js
     curl http://npmjs.org/install.sh | sh  # install node package manager
-    npm install uglify-js
+    npm install -g uglify-js
 
 Be sure to follow any instructions given by Homebrew regarding environment variables for your shell. After installation you should be able to `which node` and `which uglifyjs`. If either don't show you a path, read the post-install instructions from Homebrew again before continuing.
 
